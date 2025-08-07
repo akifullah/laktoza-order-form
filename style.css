@@ -1,0 +1,193 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: url("./bg.webp");
+        }
+
+        .form-container {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            max-width: 700px;
+            width: 100%;
+        }
+
+        .header {
+            background-color: #2a3d2b;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .header img {
+            max-width: 300px;
+        }
+
+        .logo {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .logo::after {
+            content: "🥄";
+            position: absolute;
+            right: -10px;
+            top: -5px;
+            font-size: 40px;
+            color: #ffd700;
+        }
+
+        .tagline {
+            font-size: 14px;
+            letter-spacing: 1px;
+            opacity: 0.9;
+        }
+
+        .form-content {
+            background-color: #f8f6f0;
+            padding: 40px 30px;
+        }
+
+        .form-title {
+            font-size: 36px;
+            font-weight: bold;
+            color: #3a4a2a;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .form-subtitle {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 30px;
+            text-align: center;
+            line-height: 1.4;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 4px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #333;
+            border-radius: 8px;
+            font-size: 16px;
+            background-color: white;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #2a3d2b;
+        }
+
+        .number-label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .minimum-text {
+            font-size: 16px;
+            color: #666;
+            font-weight: normal;
+        }
+
+        .radio-group {
+            margin-top: 10px;
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .radio-input {
+            width: 20px;
+            height: 20px;
+            margin-right: 15px;
+            accent-color: #2a3d2b;
+        }
+
+        .radio-label {
+            font-size: 18px;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #333;
+            border-radius: 8px;
+            font-size: 16px;
+            background-color: white;
+            min-height: 120px;
+            resize: vertical;
+            font-family: Arial, sans-serif;
+        }
+
+        .textarea:focus {
+            outline: none;
+            border-color: #2a3d2b;
+        }
+
+        .submit-btn {
+            background-color: #2a3d2b;
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 8px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            display: block;
+            margin: 30px auto 0;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #3a4a2a;
+        }
+
+        @media (max-width: 600px) {
+            .form-container {
+                margin: auto;
+            }
+
+            .form-content {
+                padding: 30px 20px;
+            }
+
+            .form-title {
+                font-size: 28px;
+            }
+
+            .logo {
+                font-size: 36px;
+            }
+        }

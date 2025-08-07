@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAKTOZA - Live Kunafa Order Form</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <div class="header">
+            <img src="./laktoza.png" alt="">
+        </div>
+        
+        <div class="form-content">
+            <h1 class="form-title">Live Kunafa Order Form</h1>
+            <p class="form-subtitle">Laktoza is now accepting orders for live kunafa at your events!</p>
+            
+            <form>
+                <div class="form-group">
+                    <label class="form-label" for="name">Name</label>
+                    <input type="text" id="name" name="name" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="contact">Contact Number</label>
+                    <input type="tel" id="contact" name="contact" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="alternate-contact">Alternate Contact Number</label>
+                    <input type="tel" id="alternate-contact" name="alternate-contact" class="form-input" placeholder="4 days before the event">
+                </div>
+                
+                <div class="form-group">
+                    <div class="number-label">
+                        <label class="form-label" for="people">Number of People</label>
+                        <span class="minimum-text">(minimum 150)</span>
+                    </div>
+                    <input type="number" id="people" name="people" class="form-input" min="150" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Kunafa Flavour</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="cheesy" name="flavour" value="cheesy" class="radio-input" required>
+                            <label for="cheesy" class="radio-label">Cheesy Kunafa (Most running)</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="lotus" name="flavour" value="lotus" class="radio-input">
+                            <label for="lotus" class="radio-label">Lotus Kunafa</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="nutella" name="flavour" value="nutella" class="radio-input">
+                            <label for="nutella" class="radio-label">Nutella Kunafa</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="rabri" name="flavour" value="rabri" class="radio-input">
+                            <label for="rabri" class="radio-label">Rabri Kunafa (Our specialty)</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="additional-request">Additional Request</label>
+                    <textarea id="additional-request" name="additional-request" class="textarea" placeholder="Enter any special requirements or additional requests..."></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Basic validation
+            if (!data.name || !data.contact || !data.people || !data.flavour) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            if (parseInt(data.people) < 150) {
+                alert('Minimum number of people is 150.');
+                return;
+            }
+            
+            // Success message
+            alert('Thank you for your order! We will contact you soon to confirm the details.');
+            
+            // Reset form
+            this.reset();
+        });
+    </script>
+</body>
+</html>
