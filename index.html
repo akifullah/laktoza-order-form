@@ -13,13 +13,21 @@
 </head>
 
 <body>
+
     <div class="form-container">
+        <div class="go-back" style="max-width: 1440px; padding: 0px 20px;"><a class="links" href="https://laktozapk.com/"
+                data-discover="true"><svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                    viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z">
+                    </path>
+                </svg></a></div>
         <div class="header">
             <div class="kunafa-img">
                 <img src="./kunafa.png" alt="">
             </div>
             <div class="header-text">
-                <h1 class="form-title">LAK'TOZA</h1>
+                <h1 class="form-title">LAKTOZA</h1>
                 <p>DISCOVER THE WORLD'S SWEETEST SECRETS</p>
             </div>
 
@@ -39,16 +47,23 @@
 
                     <div class="form-group">
                         <label class="form-label" for="contact">Contact Number:</label>
-                        <input type="tel" id="contact" name="contact" class="form-input" required>
+                        <input type="tel" id="contact" name="contact" class="form-input" placeholder="03xxxxxxxxx"
+                            required>
                     </div>
 
                     <div class="form-group">
                         <label class="form-label" for="alternate-contact">Alternate Contact Number:</label>
                         <input type="tel" id="alternate-contact" name="alternate-contact" class="form-input"
-                            placeholder="4 days before the event">
+                            placeholder="03xxxxxxxxx">
                     </div>
                 </div>
-
+                <div class="form-group">
+                    <div class="number-label">
+                        <label class="form-label" for="event-date">Event Date:</label>
+                        <span class="minimum-text">(at least 5 days before event)</span>
+                    </div>
+                    <input type="date" id="event-date" name="event_date" class="form-input" required min="2025-09-20">
+                </div>
                 <div class="form-group">
                     <div class="number-label">
                         <label class="form-label" for="people">Number of People:</label>

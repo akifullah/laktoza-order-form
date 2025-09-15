@@ -3,7 +3,9 @@
             padding: 0;
             box-sizing: border-box;
             font-family: "Poppins", sans-serif;
+            color: #193A25 !important;
         }
+
 
         body {
             padding: 10px;
@@ -23,8 +25,14 @@
             width: 100%;
             margin-top: 100px;
             margin-bottom: 100px;
+            position: relative;
         }
-
+        .go-back{
+            position: absolute;
+            top: 15px;
+            left: 5px;
+            cursor: pointer;
+        }
         .header {
             /* background-color: #2a3d2b; */
             color: white;
@@ -34,29 +42,33 @@
         }
 
         .header .kunafa-img {
-            width: 130px;
+
+            
+
+        }
+
+        .header .kunafa-img img {
             object-fit: cover;
             position: absolute;
             left: 50%;
             top: 0;
-            border: 2px solid #43240d83;
+            /* border: 2px solid #43240d83; */
             transform: translateX(-50%) translateY(-50%);
             border-radius: 50%;
-            padding: 5px;
+            /* padding: 5px; */
             background-color: #E4C390;
             box-shadow: 0 0 0px 4px #cdb48c;
             display: flex;
             align-items: center;
             justify-content: center;
-
-        }
-
-        .header .kunafa-img img {
-            width: 90%;
+            overflow: hidden;
+            width: 130px;
+            height: 100px;
+            object-fit: cover;
         }
 
         .header img {
-            border-radius: 50%;
+            /* border-radius: 50%; */
         }
 
 
@@ -146,7 +158,7 @@
 
         .form-input:focus {
             outline: none;
-            border-color: #cdb48c;
+            border-color: #193A25;
         }
 
         .number-label {
@@ -195,7 +207,7 @@
         }
 
         .radio-option:has(input[type="radio"]:checked) .img-box {
-            border: 2px solid #43240D;
+            border: 2px solid #193A25;
         }
 
         .radio-option:has(input[type="radio"]:checked) {
@@ -240,12 +252,12 @@
 
         .textarea:focus {
             outline: none;
-            border-color: #cdb48c;
+            border-color: #193A25;
         }
 
         .submit-btn {
             background-color: #2a3d2b;
-            color: white;
+            color: white !important;
             padding: 15px 40px;
             border: none;
             border-radius: 8px;
@@ -346,7 +358,7 @@
                 gap: 10px;
             }
 
-      
 
-            
+
+
         }
